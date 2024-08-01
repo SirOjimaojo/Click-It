@@ -1,0 +1,564 @@
+/* General Body Styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Header Styling */
+.header {
+    background-color: #FF5722;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed; /* Fix header to the top */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 10; /* Ensure header stays above other content */
+}
+
+/* Logo Styling */
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    position: relative; /* For positioning child elements */
+}
+
+.header .logo img {
+    width: 2rem;
+    position: absolute;
+    margin-left: 1rem;
+}
+
+/* Navigation Styling */
+.header .nav {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.header .nav li {
+    margin-left: 20px;
+}
+
+.header .nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.header .nav a:hover {
+    color: #FFC107;
+    font-size: 18px;
+}
+
+/* Search Bar Styling */
+.header .search-bar {
+    border: none;
+    padding: 5px;
+    border-radius: 4px;
+    outline: none;
+    width: 200px;
+}
+
+/* Banner Slider Container */
+.banner-slider {
+    position: relative;
+    overflow: hidden;
+    height: 400px;
+    width: 100%;
+    margin-top: 60px;
+    background-color: rgba(0, 0, 255, 0.521);
+}
+
+/* Slides Container */
+.banner-slider .slides {
+    display: flex;
+    transition: transform 1.5s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.banner-slider .slide {
+    min-width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.banner-slider .slide video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0; 
+    left: 0; 
+    z-index: 1; 
+    animation: breathing 5s infinite ease-in-out;
+}
+
+.banner-slider .description {
+    position: absolute;
+    bottom: 10%;
+    width: 30%;
+    left: 0;
+    margin-left: 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    font-size: 18px;
+    box-sizing: border-box;
+    overflow-wrap: break-word;
+    transform: translateX(-100%);
+    transition: transform 0.75s ease;
+    z-index: 2; 
+    animation: bounce 4s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+    100% { transform: translateY(0); }
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+@keyframes slide {
+    0% { transform: translate3d(15%); }
+    50% { transform: translate3d(15%); }
+    100% { transform: translate3d(15%); }
+}
+
+
+/* About Section Styling */
+.about {
+    padding: 60px 20px;
+    background-color: #fff; /* Background color for the section */
+    text-align: center; /* Center-align text */
+    position: relative;
+    z-index: 1;
+}
+
+span {
+    color: #FF5722;
+    font-weight: 800;
+    
+}
+
+/* About Content Styling */
+.about-content {
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content .alone {
+    padding: 0 20%;
+}
+
+.about-content ul {
+    font-family:Verdana, Geneva, Tahoma, sans-serif ;
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-content ul li {
+    padding: 5%;
+    list-style: none;
+    width: 100%;
+    
+}
+
+.about-content h2 {
+    font-size: 36px;
+    color: #fff;
+    background-color: #FF5722;
+    padding: 2%;
+    width: 30%;
+    margin-left: 30%;
+    margin-bottom: 20px;
+    transition: transform 1s ease;
+    animation: bounce 5s infinite ease-in-out;
+}
+
+
+.about-content p {
+    font-size: 18px;
+    color: #333;
+    line-height: 1.6;
+}
+
+
+.services-section {
+    padding: 80px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    width: calc(33.33% - 40px);
+    margin: 20px;
+    position: relative;
+    overflow: hidden;
+    background-color: #f0f0f0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+.service-content {
+    position: relative;
+    overflow: hidden;
+}
+
+.service-content img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+.service-content video {
+    width: 100%;
+    height: 38vh;
+    display: block;
+}
+
+.service-description {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 1.5s ease, opacity 1s ease;
+}
+
+.service-description i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.service-description p {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.service-description span {
+    font-size: 1rem;
+    text-align: center;
+    padding: 0 20px;
+}
+
+.service-content .link {
+    position: relative;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    color: #003572;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.8);
+}
+
+.service-content .link a i {
+    background: white;
+    font-size: 2rem;
+    border-radius: 50%;
+    color: #e64a19;
+}
+
+.service-content .link a i:hover {
+    font-size: 3rem;
+    background: #e64a19;
+    color: white;
+}
+
+.service-description a i {
+    margin: 0;
+}
+
+.service-item:hover .service-description {
+    transform: translateY(-100%);
+}
+
+.service-item:hover .service-description a {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+/* Contact Section Styling */
+.contact {
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    background-color: #f9f9f9;
+}
+
+.contact-card {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.contact-info,
+.contact-form {
+    width: 48%; /* Adjust width to fit within the card */
+}
+
+.contact-info h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.contact-info p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.social-media {
+    display: flex;
+    gap: 15px;
+}
+
+.social-icon {
+    font-size: 2rem;
+    color: #333;
+    transition: color 0.3s;
+}
+
+.social-icon:hover {
+    color: #FF5722; /* Energetic color for hover effect */
+}
+
+.contact-form h5 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.contact-form button {
+    background-color: #FF5722; /* Energetic color */
+    color: #fff;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.contact-form button:hover {
+    background-color: #e64a19; /* Darker shade for hover effect */
+}
+
+
+/* Media Queries */
+
+/* Phones (portrait and landscape) */
+@media (max-width: 599px) {
+    .header {
+        padding: 10px 15px;
+    }
+
+    .header .logo {
+        font-size: 20px;
+    }
+
+    .header .search-bar {
+        width: 150px;
+    }
+
+    .banner-slider {
+        height: 250px;
+    }
+
+    .banner-slider .description {
+        width: 80%;
+        font-size: 16px;
+        bottom: 5%;
+        margin-left: 0;
+    }
+
+    .about-content h2 {
+        font-size: 28px;
+        margin-left: 30%;
+    }
+
+    .about-content p {
+        font-size: 16px;
+    }
+
+    .services-section {
+        flex-direction: column;
+        gap: 2rem;
+
+    }
+
+    .service-item {
+        width: 90%;
+        margin: 10px auto;
+        width: 70%;
+    }
+
+    .contact-card {
+        flex-direction: column;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 100%;
+    }
+}
+
+/* Tablets (portrait and landscape) */
+@media (min-width: 600px) and (max-width: 1023px) {
+    .header {
+        padding: 12px 18px;
+    }
+
+    .header .logo {
+        font-size: 22px;
+    }
+
+    .header .search-bar {
+        width: 180px;
+    }
+
+    .banner-slider {
+        height: 300px;
+    }
+
+    .banner-slider .description {
+        width: 40%;
+        font-size: 18px;
+    }
+
+    .about-content h2 {
+        font-size: 32px;
+        margin-left: 35%;
+    }
+
+    .about-content p {
+        font-size: 17px;
+    }
+
+    .services-section {
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        width: calc(50% - 40px);
+        margin: 20px;
+    }
+
+    .contact-card {
+        flex-direction: row;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 48%;
+    }
+}
+
+/* TV Screens */
+@media (min-width: 1024px) {
+    .header {
+        padding: 15px 20px;
+    }
+
+    .header .logo {
+        font-size: 24px;
+    }
+
+    .header .search-bar {
+        width: 200px;
+    }
+
+    .banner-slider {
+        height: 400px;
+    }
+
+    .banner-slider .description {
+        width: 30%;
+        font-size: 18px;
+    }
+
+    .about-content h2 {
+        font-size: 36px;
+        margin-left: 30%;
+    }
+
+    .about-content p {
+        font-size: 18px;
+    }
+
+    .services-section {
+        flex-wrap: wrap;
+    }
+
+    .service-item {
+        width: calc(33.33% - 40px);
+        margin: 20px;
+    }
+
+    .contact-card {
+        flex-direction: row;
+    }
+
+    .contact-info,
+    .contact-form {
+        width: 48%;
+    }
+}
