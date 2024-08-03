@@ -408,19 +408,36 @@ span {
 /* Phones (portrait and landscape) */
 @media (max-width: 599px) {
     .header {
-        padding: 10px 15px;
+        padding: 10px 0;
+        width: 100%;
+    }
+
+    body {
+        margin: 0 10%;
     }
 
     .header .logo {
-        font-size: 20px;
+        font-size: 12px;
+        /* display: contents; */
+        
+
+        img {
+            width: .8rem;
+            /* margin-left: 2rem; */
+        }
     }
 
     .header .search-bar {
-        width: 150px;
+        display: none;
     }
 
     .banner-slider {
         height: 250px;
+    }
+
+    .header .nav li a {
+            font-size: .5rem;
+            left: 0;
     }
 
     .banner-slider .description {
@@ -430,13 +447,22 @@ span {
         margin-left: 0;
     }
 
+    .about {
+        width: 70%;
+    }
+
     .about-content h2 {
-        font-size: 28px;
-        margin-left: 30%;
+        font-size: 20px;
+        margin-left: 20%;
     }
 
     .about-content p {
         font-size: 16px;
+    }
+
+    .about-content ul,
+    .about-content .alone {
+        display: none;
     }
 
     .services-section {
@@ -449,6 +475,16 @@ span {
         width: 90%;
         margin: 10px auto;
         width: 70%;
+
+    }
+
+    .service-description  {
+        font-size: 1rem;
+    }
+
+    .banner-slider span {
+        width: 30%;
+        font-size: 1rem;
     }
 
     .contact-card {
